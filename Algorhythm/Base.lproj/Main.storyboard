@@ -16,8 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDJ-XP-1W4">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Own-PE-cCB"/>
+                                    <constraint firstAttribute="height" constant="200" id="k9K-rc-AE1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="rlD-dn-0Ce"/>
+                                    <constraint firstAttribute="width" constant="200" id="vjt-Hc-sgb"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Dy-2Q-ReI">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <rect key="frame" x="137" y="392" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,10 +35,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.95294117649999999" green="0.92941176469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="8Dy-2Q-ReI" secondAttribute="centerY" id="YTW-ud-xdR"/>
+                            <constraint firstAttribute="centerX" secondItem="hDJ-XP-1W4" secondAttribute="centerX" id="6rU-cd-59w"/>
+                            <constraint firstItem="8Dy-2Q-ReI" firstAttribute="top" secondItem="hDJ-XP-1W4" secondAttribute="bottom" constant="8" id="MFe-va-5gm"/>
                             <constraint firstAttribute="centerX" secondItem="8Dy-2Q-ReI" secondAttribute="centerX" id="lR9-Wi-ty8"/>
+                            <constraint firstAttribute="centerY" secondItem="hDJ-XP-1W4" secondAttribute="centerY" id="zj6-Vo-gCz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="jRo-C5-qdg"/>
