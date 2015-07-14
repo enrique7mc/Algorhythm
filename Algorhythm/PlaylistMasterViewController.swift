@@ -9,14 +9,11 @@
 import UIKit
 
 class PlaylistMasterViewController: UIViewController {
-
-    @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var playlistImageView0: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myButton.setTitle("Press me!", forState: .Normal)
         let playlist = Playlist(index: 0)
         playlistImageView0.image = playlist.icon!
     }
@@ -27,10 +24,15 @@ class PlaylistMasterViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showPlaylistDetail" {
+        if segue.identifier == "showPlaylistDetailSegue" {
             let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
             playlistDetailController.playlist = Playlist(index: 0)
         }
+    }
+    
+    
+    @IBAction func showPlaylistDetail(sender: AnyObject) {
+        performSegueWithIdentifier("showPlaylistDetailSegue", sender: sender)
     }
 }
 

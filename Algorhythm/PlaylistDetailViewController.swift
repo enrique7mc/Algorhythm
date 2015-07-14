@@ -9,14 +9,31 @@
 import UIKit
 
 class PlaylistDetailViewController: UIViewController {
-
-    @IBOutlet weak var buttonPressedLabel: UILabel!
     var playlist: Playlist?
+    
+    @IBOutlet weak var playlistCoverImage: UIImageView!
+    @IBOutlet weak var playlistTitle: UILabel!
+    @IBOutlet weak var playlistDescription: UILabel!
+    
+    @IBOutlet weak var playlistArtist0: UILabel!
+    @IBOutlet weak var playlistArtist1: UILabel!
+    @IBOutlet weak var playlistArtist2: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if playlist != nil {
-            buttonPressedLabel.text = playlist!.title
+            playlistCoverImage.image = playlist!.largeIcon
+            playlistCoverImage.backgroundColor = playlist!.backgroundColor
+            playlistTitle.text = playlist!.title
+            playlistDescription.text = playlist!.description
+            
+            let artists = playlist!.artists
+
+            playlistArtist0.text = artists[0]
+            playlistArtist1.text = artists[1]
+            playlistArtist2.text = artists[2]
+            
         }
     }
 
